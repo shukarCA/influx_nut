@@ -147,7 +147,7 @@ class NUTConnection:
                                              ('type', 'ups', 'var', 'value'))
         req = 'GET VAR {} {}'.format(ups, var)
         raw_resp = self.request(req)
-        resp = VarResponse(*(raw_resp.split(' ')))
+        resp = VarResponse(*(raw_resp.split(' ',3)))
         return resp.value.strip('"')
 
     def request_list(self, thing):
