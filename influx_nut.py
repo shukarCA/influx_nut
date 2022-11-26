@@ -1,5 +1,6 @@
 import socket
 import collections
+import collections.abc
 import time
 import json
 import os
@@ -280,7 +281,7 @@ def _recursive_update(d: Mapping, u: Mapping):
     u -- updated mapping
     """
     for k, v in u.items():
-        if isinstance(v, collections.Mapping):
+        if isinstance(v, collections.abc.Mapping):
             r = _recursive_update(d.get(k, {}), v)
             d[k] = r
         else:
