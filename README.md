@@ -1,5 +1,8 @@
 # influx_nut
 
+I am archiving this repo as I no longer use it, and the project it was forked from is also archived so I can't merge it. The differences from the project it was forked from are twofold. Firstly, the change from just collections to collections.abc improved support for newer version of Python. Secondly, changes to a split() action were made to add support for spaces in UPS status values.
+
+
 An interface between Network UPS Tools and influxdb.
 
 This allows sending metrics from NUT to an influxdb database.
